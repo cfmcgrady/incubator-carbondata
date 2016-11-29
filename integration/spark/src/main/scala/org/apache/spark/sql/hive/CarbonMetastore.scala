@@ -293,7 +293,7 @@ class CarbonMetastore(hiveContext: HiveContext, val storePath: String,
     if (!FileFactory.isFileExist(schemaMetadataPath, fileType)) {
       FileFactory.mkdirs(schemaMetadataPath, fileType)
     }
-    
+
     val thriftWriter = new ThriftWriter(schemaFilePath, false)
     thriftWriter.open()
     thriftWriter.write(thriftTableInfo)
